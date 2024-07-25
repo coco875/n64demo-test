@@ -50,3 +50,11 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+build/*
+tools/mingw64
+tools/mio0
+tools/n64cksum
+tools/n64graphics
+tools/n64tool
+tools/tkmk00
