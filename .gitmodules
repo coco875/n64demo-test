@@ -4,3 +4,6 @@
 [submodule "lib/f3dex2"]
 	path = lib/f3dex2
 	url = https://github.com/Mr-Wiseguy/f3dex2.git
+[submodule "tools/armips"]
+	path = tools/armips
+	url = https://github.com/Kingcom/armips
