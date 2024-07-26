@@ -7,3 +7,6 @@
 [submodule "tools/armips"]
 	path = tools/armips
 	url = https://github.com/Kingcom/armips
+[submodule "lib/N64-IPL"]
+	path = lib/N64-IPL
+	url = https://github.com/decompals/N64-IPL

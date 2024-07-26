@@ -33,6 +33,7 @@ SECTIONS
    BEGIN_SEG(boot, 0xA4000000)
    {
       BUILD_DIR/asm/rom_header.o(.text);
+      lib/N64-IPL/build/ipl3.6102_7101.o(.text);
    }
    END_SEG(boot)
 
