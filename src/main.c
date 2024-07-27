@@ -88,6 +88,8 @@ static void mainThreadFunction(void *arg)
     char echobuffer[1024]; // 1 kilobyte buffer for echoing data back
     char incoming_type = 0;
     int incoming_size = 0;
+
+    osSyncPrintf("Hello, World!\n");
     
     // Give the user instructions
     usb_write(DATATYPE_TEXT, "Type something into the console!\n", 33+1);

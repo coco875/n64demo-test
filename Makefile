@@ -152,7 +152,7 @@ endef
 #==============================================================================#
 
 ifeq ($(DEBUG), 1)
-  OPT_FLAGS += -g -O0
+  OPT_FLAGS += -Os -ggdb
   DEFINES += DEBUG_MODE=1
 else
   OPT_FLAGS += -O2
@@ -180,7 +180,7 @@ CFLAGS = -G 0 $(OPT_FLAGS) $(TARGET_CFLAGS) $(MIPSISET) $(DEF_INC_CFLAGS) -mno-s
 
 ASFLAGS = -march=vr4300 -mabi=32 -non_shared -I $(BUILD_DIR) $(VERSION_ASFLAGS) $(foreach d,$(DEFINES),--defsym $(d))
 
-LDFLAGS = -T undefined_syms.txt -T $(BUILD_DIR)/$(LD_SCRIPT) -Map $(BUILD_DIR)/$(TARGET).map --no-check-sections
+LDFLAGS = -T undefined_syms.txt -T $(BUILD_DIR)/$(LD_SCRIPT) -Map $(BUILD_DIR)/$(TARGET).map --no-check-sections -g
 
 all: $(ROM)
 
